@@ -11,42 +11,19 @@ import com.phone.phonelcdparts.util.KMMPreference
 import io.github.xxfast.decompose.LocalComponentContext
 import platform.UIKit.UIViewController
 
-
-//fun Main(pref: KMMPreference, safeAreaInsetsBottom: CGFloat, safeAreaInsetsTop: CGFloat, browserWrapper: BrowserWrapper): UIViewController = ComposeUIViewController {
-//
-//    val lifecycle = LifecycleRegistry()
-//    val rootComponentContext = DefaultComponentContext(lifecycle = lifecycle)
-//    CompositionLocalProvider(LocalComponentContext provides rootComponentContext) {
-//        MaterialTheme {
-//            App(pref, browserWrapper,safeAreaInsetsBottom.toFloat(), safeAreaInsetsBottom.toFloat())
-//        }
-//    }
-//}
-
 fun Main(
     pref: KMMPreference,
-    browserWrapper: BrowserWrapper,
-): UIViewController = ComposeUIViewController{
+    browserWrapper: BrowserWrapper
+): UIViewController = ComposeUIViewController {
 
     val lifecycle = LifecycleRegistry()
     val rootComponentContext = DefaultComponentContext(lifecycle = lifecycle)
     CompositionLocalProvider(LocalComponentContext provides rootComponentContext) {
         MaterialTheme {
-                    App(pref, browserWrapper)
+            App(pref, browserWrapper)
         }
     }
 }
-
-
-//fun Main(pref: KMMPreference, browserWrapper: BrowserWrapper): UIViewController = ComposeUIViewController{
-//    val lifecycle = LifecycleRegistry()
-//    val rootComponentContext = DefaultComponentContext(lifecycle = lifecycle)
-//    CompositionLocalProvider(LocalComponentContext provides rootComponentContext) {
-//        MaterialTheme {
-//            App(pref, browserWrapper)
-//        }
-//    }
-//}
 
 fun onBackGesture() {
     store.send(Action.OnBackPressed)

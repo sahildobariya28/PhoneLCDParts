@@ -11,7 +11,7 @@ import androidx.compose.ui.graphics.vector.path
 import androidx.compose.ui.unit.dp
 import com.phone.phonelcdparts.resource.MyIconPack
 
-public val MyIconPack.Contact: ImageVector
+val MyIconPack.Contact: ImageVector
     get() {
         if (_contact != null) {
             return _contact!!

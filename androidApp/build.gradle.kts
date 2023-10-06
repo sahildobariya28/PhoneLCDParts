@@ -17,7 +17,7 @@ kotlin {
 }
 
 android {
-    compileSdk = 33
+    compileSdk = 34
     namespace = "com.phone.phonelcdparts.android"
 
     sourceSets["main"].manifest.srcFile("src/main/AndroidManifest.xml")
@@ -26,7 +26,7 @@ android {
     defaultConfig {
         applicationId = "com.phone.phonelcdparts.android"
         minSdk = 24
-        targetSdk = 33
+        targetSdk = 34
         versionCode = 1
         versionName = "1.0"
     }
@@ -50,4 +50,13 @@ dependencies {
     implementation("io.ktor:ktor-client-okhttp:2.3.1")
     implementation("com.arkivanov.decompose:decompose:2.0.0-compose-experimental-alpha-02")
     implementation("io.github.xxfast:decompose-router:0.2.1")
+
+    implementation("androidx.camera:camera-camera2:1.2.2")
+    implementation("androidx.camera:camera-lifecycle:1.2.2")
+    implementation("androidx.camera:camera-view:1.2.2")
+    implementation("com.google.android.gms:play-services-maps:18.1.0")
+    implementation("com.google.android.gms:play-services-location:21.0.1")
+    implementation("com.google.maps.android:maps-compose:2.11.2")
+    implementation("com.google.accompanist:accompanist-permissions:0.29.2-rc")
+
 }

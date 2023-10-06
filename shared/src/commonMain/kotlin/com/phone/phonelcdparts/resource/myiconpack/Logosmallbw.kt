@@ -14,7 +14,7 @@ import androidx.compose.ui.graphics.vector.path
 import androidx.compose.ui.unit.dp
 import com.phone.phonelcdparts.resource.MyIconPack
 
-public val MyIconPack.Logosmallbw: ImageVector
+val MyIconPack.Logosmallbw: ImageVector
     get() {
         if (_logosmallbw != null) {
             return _logosmallbw!!

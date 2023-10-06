@@ -11,7 +11,7 @@ import androidx.compose.ui.graphics.vector.path
 import androidx.compose.ui.unit.dp
 import com.phone.phonelcdparts.resource.MyIconPack
 
-public val MyIconPack.Hidepassword: ImageVector
+val MyIconPack.Hidepassword: ImageVector
     get() {
         if (_hidepassword != null) {
             return _hidepassword!!

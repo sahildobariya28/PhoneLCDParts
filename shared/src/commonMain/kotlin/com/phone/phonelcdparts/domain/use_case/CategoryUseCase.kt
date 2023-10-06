@@ -1,11 +1,7 @@
 package com.phone.phonelcdparts.domain.use_case
 
 import com.phone.phonelcdparts.core.Resource
-import com.phone.phonelcdparts.data.mapper.toDomainBanner
-import com.phone.phonelcdparts.data.mapper.toDomainCategoryItem
-import com.phone.phonelcdparts.data.remote.BannerService
-import com.phone.phonelcdparts.data.remote.CategoryService
-import com.phone.phonelcdparts.domain.model.BannerItem
+import com.phone.phonelcdparts.data.service.CategoryService
 import com.phone.phonelcdparts.domain.model.CategoryItem
 import io.ktor.http.HttpStatusCode
 import io.ktor.http.isSuccess
@@ -21,7 +17,7 @@ class CategoryUseCase(private val repository: CategoryService) {
 
             if (status != null) {
                 if (status.isSuccess()){
-                    val domainData = if (fetchedBanners.isNotEmpty()) fetchedBanners.map { it.toDomainCategoryItem() } else emptyList()
+                    val domainData = if (fetchedBanners.isNotEmpty()) fetchedBanners.map { it } else emptyList()
                     emit(Resource.Success(data = domainData, status = status))
                 }else{
                     emit(Resource.Error(data = emptyList(), status = status))

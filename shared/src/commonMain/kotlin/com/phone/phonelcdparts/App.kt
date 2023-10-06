@@ -1,11 +1,10 @@
 package com.phone.phonelcdparts
 
-import AppContent
 import androidx.compose.foundation.layout.Box
 import androidx.compose.material.MaterialTheme
 import androidx.compose.runtime.Composable
 import com.phone.phonelcdparts.states.Action
-import com.phone.phonelcdparts.ui.ApplicationContainer
+import com.phone.phonelcdparts.presentation.ApplicationContainer
 import com.phone.phonelcdparts.util.BrowserWrapper
 import com.phone.phonelcdparts.util.KMMPreference
 import kotlinx.coroutines.CoroutineScope

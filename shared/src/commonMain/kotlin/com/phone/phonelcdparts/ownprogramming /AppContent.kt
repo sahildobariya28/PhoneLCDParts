@@ -72,7 +72,6 @@ fun AppContent() {
     }
 }
 
-@OptIn(ExperimentalComposeUiApi::class)
 fun evaluateExpression(input: String): String {
     val interpreter = Interpreter(input)
     return interpreter.expr()
@@ -137,7 +136,7 @@ class Lexer(private val input: String) {
             return Token(TokenType.END)
         }
 
-        var currentChar = input[position]
+        val currentChar = input[position]
 
         if (currentChar.isDigit()) {
             // Handle integer token
@@ -183,7 +182,7 @@ class Lexer(private val input: String) {
 }
 
 // Interpreter class
-class Interpreter(private val input: String) {
+class Interpreter(input: String) {
     private val lexer = Lexer(input)
 
     fun expr(): String {

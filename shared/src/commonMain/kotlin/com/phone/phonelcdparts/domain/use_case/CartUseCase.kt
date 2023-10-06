@@ -1,8 +1,7 @@
 package com.phone.phonelcdparts.domain.use_case
 
 import com.phone.phonelcdparts.core.Resource
-import com.phone.phonelcdparts.data.mapper.toDomainCart
-import com.phone.phonelcdparts.data.remote.CartService
+import com.phone.phonelcdparts.data.service.CartService
 import com.phone.phonelcdparts.domain.model.CartItem
 import io.ktor.http.HttpStatusCode
 import io.ktor.http.isSuccess
@@ -18,7 +17,7 @@ class CartUseCase(private val repository: CartService) {
 
             if (status != null) {
                 if (status.isSuccess()){
-                    val domainData = if (fetchedCart.isNotEmpty()) fetchedCart.map { it.toDomainCart() } else emptyList()
+                    val domainData = if (fetchedCart.isNotEmpty()) fetchedCart.map { it } else emptyList()
                     emit(Resource.Success(data = domainData, status = status))
                 }else{
                     emit(Resource.Error(data = emptyList(), status = status))

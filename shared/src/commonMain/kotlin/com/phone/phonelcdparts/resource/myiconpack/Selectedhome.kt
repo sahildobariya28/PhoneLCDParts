@@ -14,7 +14,7 @@ import androidx.compose.ui.graphics.vector.path
 import androidx.compose.ui.unit.dp
 import com.phone.phonelcdparts.resource.MyIconPack
 
-public val MyIconPack.Selectedhome: ImageVector
+val MyIconPack.Selectedhome: ImageVector
     get() {
         if (_selectedhome != null) {
             return _selectedhome!!

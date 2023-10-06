@@ -46,6 +46,7 @@ kotlin {
                 @OptIn(org.jetbrains.compose.ExperimentalComposeLibrary::class)
                 implementation(compose.components.resources)
 
+
                 implementation("com.arkivanov.decompose:decompose:2.0.0-compose-experimental-alpha-02")
                 implementation("com.arkivanov.decompose:extensions-compose-jetbrains:2.0.0-compose-experimental-alpha-02")
                 implementation("io.github.xxfast:decompose-router:0.2.1")
@@ -53,6 +54,7 @@ kotlin {
 
                 implementation("io.ktor:ktor-client-core:$ktorVersion")
                 implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.4")
+                implementation("org.jetbrains.kotlinx:kotlinx-datetime:0.4.0")
                 implementation("io.ktor:ktor-client-json:$ktorVersion")
                 implementation("io.ktor:ktor-client-content-negotiation:$ktorVersion")
                 implementation("io.ktor:ktor-serialization-kotlinx-json:$ktorVersion")
@@ -64,6 +66,9 @@ kotlin {
                 implementation("com.mohamedrejeb.ksoup:ksoup-entites:0.1.3")
 
                 implementation("io.insert-koin:koin-core:3.4.0")
+
+                implementation("media.kamel:kamel-image:0.7.3")
+
             }
         }
         val androidMain by getting {

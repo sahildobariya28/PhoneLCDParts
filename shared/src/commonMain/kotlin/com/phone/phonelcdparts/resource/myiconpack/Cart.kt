@@ -11,7 +11,7 @@ import androidx.compose.ui.graphics.vector.path
 import androidx.compose.ui.unit.dp
 import com.phone.phonelcdparts.resource.MyIconPack
 
-public val MyIconPack.Cart: ImageVector
+val MyIconPack.Cart: ImageVector
     get() {
         if (_cart != null) {
             return _cart!!

@@ -41,11 +41,11 @@ import com.phone.phonelcdparts.resource.myiconpack.Vatnumber
 import com.phone.phonelcdparts.resource.myiconpack.Zipcode
 import kotlin.collections.List as ____KtList
 
-public object MyIconPack
+object MyIconPack
 
 private var __AllIcons: ____KtList<ImageVector>? = null
 
-public val MyIconPack.AllIcons: ____KtList<ImageVector>
+val MyIconPack.AllIcons: ____KtList<ImageVector>
   get() {
     if (__AllIcons != null) {
       return __AllIcons!!

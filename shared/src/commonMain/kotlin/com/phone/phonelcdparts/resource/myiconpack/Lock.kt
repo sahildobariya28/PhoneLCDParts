@@ -11,7 +11,7 @@ import androidx.compose.ui.graphics.vector.path
 import androidx.compose.ui.unit.dp
 import com.phone.phonelcdparts.resource.MyIconPack
 
-public val MyIconPack.Lock: ImageVector
+val MyIconPack.Lock: ImageVector
     get() {
         if (_lock != null) {
             return _lock!!

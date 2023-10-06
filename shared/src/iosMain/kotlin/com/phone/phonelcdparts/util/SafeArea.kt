@@ -10,8 +10,8 @@ import platform.UIKit.UIApplication
 actual fun SafeArea(content: @Composable (top:Float, bottom:Float) -> Unit) {
     val statusBarHeight = UIApplication.sharedApplication.statusBarFrame.useContents { size.height }
     val window = UIApplication.sharedApplication.keyWindow!!
-    var paddingTop: CGFloat
-    var paddingBottom: CGFloat
+    val paddingTop: CGFloat
+    val paddingBottom: CGFloat
     if (window.respondsToSelector(NSSelectorFromString("safeAreaInsets"))) {
         paddingTop = window.safeAreaInsets.useContents { top }
         paddingBottom = window.safeAreaInsets.useContents { bottom }

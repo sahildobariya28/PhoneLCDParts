@@ -11,7 +11,7 @@ import androidx.compose.ui.graphics.vector.path
 import androidx.compose.ui.unit.dp
 import com.phone.phonelcdparts.resource.MyIconPack
 
-public val MyIconPack.Location: ImageVector
+val MyIconPack.Location: ImageVector
     get() {
         if (_location != null) {
             return _location!!

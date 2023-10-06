@@ -24,9 +24,11 @@ object HttpRoutes {
     const val CATEGORY_IMG = "${BASE_URL}media/catalog/category/"
     const val CART = "${BASE_URL}rest/V1/carts/mine"
     const val CART_ITEMS = "${BASE_URL}rest/V1/carts/mine/items"
+    const val QUOTE_ID = "${BASE_URL}rest/V1/carts/mine"
+    const val INSERT_CART_ITEMS = "${BASE_URL}rest/V1/carts/mine/items"
     const val ORDER_HISTORY = "${BASE_URL}rest/V1/orders"
     const val USER_INFO = "${BASE_URL}rest/V1/customers/me"
-    val POSTS = "https://jsonplaceholder.typicode.com/posts"
+    const val POSTS = "https://jsonplaceholder.typicode.com/posts"
 
 
     //media url

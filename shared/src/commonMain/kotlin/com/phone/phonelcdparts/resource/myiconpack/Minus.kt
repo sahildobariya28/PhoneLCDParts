@@ -1,7 +1,6 @@
 package com.phone.phonelcdparts.resource.myiconpack
 
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.PathFillType
 import androidx.compose.ui.graphics.PathFillType.Companion.NonZero
 import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.graphics.StrokeCap.Companion.Butt
@@ -14,7 +13,7 @@ import androidx.compose.ui.graphics.vector.path
 import androidx.compose.ui.unit.dp
 import com.phone.phonelcdparts.resource.MyIconPack
 
-public val MyIconPack.Minus: ImageVector
+val MyIconPack.Minus: ImageVector
     get() {
         if (_minus != null) {
             return _minus!!
